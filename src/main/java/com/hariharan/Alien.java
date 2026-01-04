@@ -1,12 +1,21 @@
 package com.hariharan;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
 
     private int age;
+    private int salary;
     private Laptop lap;
 
     public Alien(){
         System.out.println("Object Created");
+    }
+
+    @ConstructorProperties({"age", "lap"})
+    public Alien(int age, Laptop lap) {
+        this.age = age;
+        this.lap = lap;
     }
 
     public int getAge() {
