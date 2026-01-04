@@ -8,7 +8,7 @@ public class Alien {
     private Computer com;
 
     public Alien(){
-        System.out.println("Object Created");
+        //System.out.println("Object Created");
     }
 
     /*@ConstructorProperties({"age", "lap"})
@@ -22,7 +22,7 @@ public class Alien {
     }
 
     public void setAge(int age) {
-        System.out.println("setter called");
+        //System.out.println("setter called");
         this.age = age;
     }
 

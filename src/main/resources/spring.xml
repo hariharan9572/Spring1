@@ -6,7 +6,11 @@
 
     <!--<bean id="alien1" class="com.hariharan.Alien" scope="prototype"></bean>-->
 
-    <bean id="alien1" class="com.hariharan.Alien">
+    <bean id="alien1" class="com.hariharan.Alien" autowire="byName">
+
+        <property name="age" value="21"/>
+        <!--<property name="com" ref="com1"/>-->
+
         <!--<property name="age" value="21"></property>-->
 
         <!--<constructor-arg type="com.hariharan.Laptop" ref="lap1"/>
@@ -15,13 +19,15 @@
         <!--<constructor-arg index="1" ref="lap1"/>
         <constructor-arg index="0" value="21"/>-->
 
-        <constructor-arg name="lap" ref="lap1"/>
-        <constructor-arg name="age" value="21"/>
+        <!--<constructor-arg name="lap" ref="lap1"/>
+        <constructor-arg name="age" value="21"/>-->
 
-        <!--<property name="lap" ref="lap1"/>-->
     </bean>
 
-    <bean id="lap1" class="com.hariharan.Laptop">
+    <bean id="com1" class="com.hariharan.Laptop">
+    </bean>
+
+    <bean id="com2" class="com.hariharan.Desktop">
     </bean>
 
 
