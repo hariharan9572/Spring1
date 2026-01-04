@@ -8,10 +8,13 @@ public class App
     public static void main( String[] args )
     {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); //object created in this line
         //Alien obj = context.getBean(Alien.class);
-        Alien obj = (Alien) context.getBean("alien");
-        obj.code();
+        Alien obj1 = (Alien) context.getBean("alien1");
+        obj1.code();
+
+        Alien obj2 = (Alien) context.getBean("alien1");
+        obj2.code();
 
     }
 }
