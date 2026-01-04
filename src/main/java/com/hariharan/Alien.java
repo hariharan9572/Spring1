@@ -2,6 +2,8 @@ package com.hariharan;
 
 public class Alien {
 
+    int age;
+
     public Alien(){
         System.out.println("Object Created");
     }
