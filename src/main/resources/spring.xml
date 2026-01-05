@@ -6,10 +6,13 @@
 
     <!--<bean id="alien1" class="com.hariharan.Alien" scope="prototype"></bean>-->
 
-    <bean id="alien1" class="com.hariharan.Alien" autowire="byType">
+    <bean id="alien1" class="com.hariharan.Alien" autowire="byType"><!--outer bean-->
 
         <property name="age" value="21"/>
-        <property name="com" ref="com1"/>
+        <property name="com">
+            <bean id="com1" class="com.hariharan.Laptop" primary="true">
+            </bean><!--Inner bean-->
+        </property>
 
         <!--<property name="age" value="21"></property>-->
 
@@ -24,11 +27,11 @@
 
     </bean>
 
-    <bean id="com1" class="com.hariharan.Laptop" primary="true">
-    </bean>
+    <!--<bean id="com1" class="com.hariharan.Laptop" primary="true">
+    </bean>-->
 
-    <bean class="com.hariharan.Desktop" lazy-init="true">
-    </bean>
+    <!--<bean class="com.hariharan.Desktop" lazy-init="true">
+    </bean>-->
 
 
 </beans>
