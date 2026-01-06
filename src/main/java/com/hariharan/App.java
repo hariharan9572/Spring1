@@ -12,8 +12,15 @@ public class App
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt = context.getBean("desktop",Desktop.class);
+        Alien obj1 = context.getBean(Alien.class);
+        System.out.println(obj1.getAge());
+        obj1.code();
+
+        /*Desktop dt = context.getBean(Desktop.class);
         dt.compile();
+
+        Desktop dt1 = context.getBean(Desktop.class);
+        dt.compile();*/
 
         /*ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); //object created in this line
         //Alien obj = context.getBean(Alien.class);
