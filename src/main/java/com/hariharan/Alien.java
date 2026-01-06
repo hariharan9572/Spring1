@@ -1,5 +1,7 @@
 package com.hariharan;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -8,12 +10,15 @@ import java.beans.ConstructorProperties;
 public class Alien {
 
     private int age;
+    //@Autowired // field injection
+    //@Qualifier("com2")
     private Computer com;
 
     public Alien(){
         System.out.println("Alien Object Created");
     }
 
+    //@Autowired // constructor injection
     /*@ConstructorProperties({"age", "lap"})
     public Alien(int age, Laptop lap) {
         this.age = age;
@@ -33,6 +38,7 @@ public class Alien {
         return com;
     }
 
+    @Autowired // setter injetion
     public void setCom(Computer com) {
         this.com = com;
     }

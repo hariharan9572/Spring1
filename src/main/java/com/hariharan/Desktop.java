@@ -2,7 +2,7 @@ package com.hariharan;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("com2")
 public class Desktop implements Computer{
 
     public Desktop(){
